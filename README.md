@@ -1,0 +1,4 @@
+maxdocs
+=======
+
+Max documentation
