@@ -92,11 +92,11 @@ exclude_patterns = ['_build', 'README.rst', '_themes/README.rst']
 # -- Options for HTML output ---------------------------------------------------
 
 # Add and use Pylons theme
-sys.path.append(os.path.abspath('_themes'))
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
-html_theme = 'bootstrap'
-html_short_title = "MAX Docs"
-html_logo = "logo_MAX_24.png"
+# sys.path.append(os.path.abspath('_themes'))
+# html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+# html_theme = 'bootstrap'
+# html_short_title = "MAX Docs"
+# html_logo = "logo_MAX_24.png"
 
 # html_theme_path = ['_themes']
 # html_theme = 'pylons'
@@ -104,7 +104,7 @@ html_logo = "logo_MAX_24.png"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# html_theme = 'sphinxdoc'
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
