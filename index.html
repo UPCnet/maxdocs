@@ -1,0 +1,3378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MAX API docs</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/sticky-footer-navbar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300">
+    <!--[if lt IE 9]-->
+    <script src="/vendor/assets/js/html5shiv.js"></script>
+    <script src="/vendor/assets/js/respond.min.js"></script>
+    <!--[endif]-->
+  </head>
+  <body>
+    <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><img src="images/simbol_MAX_24.png" class="pull-left"><a href="/" class="navbar-brand">MAX API</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container maxapi">
+      <div class="row">
+        <div class="col-xs-3">
+          <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+            <div id="categories" class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-activities" class="collapsed">Activities</a></h4>
+                </div>
+                <div id="category-activities" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="activities-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activities" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Activities</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Activity</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_activities" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context activities</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_activities_authors" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context authors</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity_file_download" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>File</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity_image" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Image</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity_image_sizes" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Named size Image</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#timeline" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User Timeline</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#timeline_authors" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User Timeline authors</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_activities" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User activities</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#favorite" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>favorite</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#favorites" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>favorites</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#like" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>like</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#likes" data-parent="activities-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>likes</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-comments" class="collapsed">Comments</a></h4>
+                </div>
+                <div id="category-comments" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="comments-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity_comment" data-parent="comments-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Activity comment</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#activity_comments" data-parent="comments-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Activity comments</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#comments" data-parent="comments-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Comments (Global)</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_comments" data-parent="comments-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context comments</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-contexts" class="collapsed">Contexts</a></h4>
+                </div>
+                <div id="category-contexts" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="contexts-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_avatar" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context avatar</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_user_permission" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context permission</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_user_permissions_defaults" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context permissions defaults</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_tag" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context tag</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_tags" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context tags</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_push_tokens" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Context tokens</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#contexts" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Contexts</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#public_contexts" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Public contexts</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#context_subscriptions" data-parent="contexts-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Users subscribed to context</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-conversations" class="collapsed">Conversations</a></h4>
+                </div>
+                <div id="category-conversations" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="conversations-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#conversation" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversation</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#conversation_avatar" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversation avatar</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#messages" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversation mesages</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#conversation_owner" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversation owner</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#pushtokens" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversation tokens</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#conversations" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversations</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_conversation" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User conversation</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_conversation_messages" data-parent="conversations-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User conversation messages</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-management" class="collapsed">Management</a></h4>
+                </div>
+                <div id="category-management" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="management-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_conversations" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Conversations maintenance</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_dates" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Dates maintenance</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_exception" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Error Exception</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_exceptions" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Error Exception list</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_keywords" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Keywords maintenance</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#info" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Public settings</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#info_settings" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Restricted settings</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#admin_security" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Security settings</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_subscriptions" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Subscriptions maintenance</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#admin_security_role_user" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User role</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#maintenance_users" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Users Maintenance</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#admin_security_users" data-parent="management-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Users with security</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-messages" class="collapsed">Messages</a></h4>
+                </div>
+                <div id="category-messages" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="messages-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#message_file_download" data-parent="messages-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>File</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#message_image" data-parent="messages-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Image</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#message_image_sizes" data-parent="messages-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Named size Image</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-subscriptions" class="collapsed">Subscriptions</a></h4>
+                </div>
+                <div id="category-subscriptions" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="subscriptions-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#subscription" data-parent="subscriptions-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User subscription</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#subscriptions" data-parent="subscriptions-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User subscriptions</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-uncategorized" class="collapsed">Uncategorized</a></h4>
+                </div>
+                <div id="category-uncategorized" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="uncategorized-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#follow" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>follow</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#follows" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>follows</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#share" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>share</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#shares" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>shares</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_comments" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>user_comments</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_shares" data-parent="uncategorized-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>user_shares</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"><a data-toggle="collapse" data-parent="#categories" href="#category-user" class="collapsed">User</a></h4>
+                </div>
+                <div id="category-user" class="panel-collapse collapse">
+                  <div class="panel-body resources-panel">
+                    <div id="user-resources" class="panel-group">
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#avatar" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User avatar</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#avatar_sizes" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User avatar sizes</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_device" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User device tokens</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_favorites" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User favorited activities</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#user_likes" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>User liked activity</a></div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default resource">
+                        <div class="panel-heading">
+                          <div class="panel-title"><a href="#users" data-parent="user-resources" class="resource-item"><i class="glyphicon glyphicon-paperclip"></i>Users</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-9">
+          <h2 id="Activities">Activities
+          </h2>
+          <div class="panel panel-info">
+            <div id="activities" class="panel-heading">Activities
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activities-head" data-toggle="pill">HEAD</a></li>
+                <li><a href="#activities-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities
+            </div>
+            <div class="tab-content">
+              <div id="activities-head" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activities-head-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activities-head-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activities-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activities-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activities-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="activity" class="panel-heading">Activity
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#activity-get" data-toggle="pill">GET</a></li>
+                <li><a href="#activity-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}
+            </div>
+            <div class="tab-content">
+              <div id="activity-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity-put-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity-put-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activity-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">activity</span><span class="description">The id of the activity</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns a single activity
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activity-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity-delete-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#activity-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="activity-delete-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">activity</span><span class="description">The id of the activity</span></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">Deletes a single activity
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_activities" class="panel-heading">Context activities
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_activities-head" data-toggle="pill">HEAD</a></li>
+                <li><a href="#context_activities-post" data-toggle="pill">POST</a></li>
+                <li><a href="#context_activities-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/activities
+            </div>
+            <div class="tab-content">
+              <div id="context_activities-head" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_activities-head-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_activities-head-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">hash</span><span class="description">The hash of the context url where the activties where posted</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns all the activities posted on a context
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_activities-post" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_activities-post-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_activities-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people|contexts/{username|hash}/activities
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_activities-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_activities-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_activities-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">hash</span><span class="description">The hash of the context url where the activties where posted</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns all the activities posted on a context
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_activities_authors" class="panel-heading">Context authors
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_activities_authors-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/activities/authors
+            </div>
+            <div class="tab-content">
+              <div id="context_activities_authors-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_activities_authors-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_activities_authors-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/{hash}/activities/authors
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="activity_file_download" class="panel-heading">File
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity_file_download-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/file/download
+            </div>
+            <div class="tab-content">
+              <div id="activity_file_download-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_file_download-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_file_download-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">activity</span><span class="description">The id of the activity</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns a file from the local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="activity_image" class="panel-heading">Image
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity_image-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/image
+            </div>
+            <div class="tab-content">
+              <div id="activity_image-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_image-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_image-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">activity</span><span class="description">The id of the activity</span></div>
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">size</span><span class="description">The named size of the activity, defaults to large</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns an image from the local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="activity_image_sizes" class="panel-heading">Named size Image
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity_image_sizes-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/image/{size}
+            </div>
+            <div class="tab-content">
+              <div id="activity_image_sizes-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_image_sizes-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_image_sizes-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">activity</span><span class="description">The id of the activity</span></div>
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">size</span><span class="description">The named size of the activity, defaults to large</span></div>
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns an image from the local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="timeline" class="panel-heading">User Timeline
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#timeline-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/timeline
+            </div>
+            <div class="tab-content">
+              <div id="timeline-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#timeline-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="timeline-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/timeline
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="timeline_authors" class="panel-heading">User Timeline authors
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#timeline_authors-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/timeline/authors
+            </div>
+            <div class="tab-content">
+              <div id="timeline_authors-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#timeline_authors-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="timeline_authors-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/timeline/authors
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_activities" class="panel-heading">User activities
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_activities-post" data-toggle="pill">POST</a></li>
+                <li><a href="#user_activities-head" data-toggle="pill">HEAD</a></li>
+                <li><a href="#user_activities-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/activities
+            </div>
+            <div class="tab-content">
+              <div id="user_activities-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_activities-post-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user_activities-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_activities-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people|contexts/{username|hash}/activities
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user_activities-post-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">username</span><span class="description">The username that will own the activity</span></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <p>
+                                      </p>
+                                      <p>
+                                      </p>
+                                      <p>
+                                      </p>
+                                    </li>
+                                    <li class="list-group-item">Adds a post to the user activities
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user_activities-head" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_activities-head-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user_activities-head-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_activities-head-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/activities
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user_activities-head-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">username</span><span class="description">The user that posted the activities</span></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">Return all activities generated by a user.
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user_activities-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_activities-get-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user_activities-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_activities-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/activities
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user_activities-get-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                      <div class="rest-param"><span class="label label-success">RP</span><span class="name source">username</span><span class="description">The user that posted the activities</span></div>
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">Return all activities generated by a user.
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="favorite" class="panel-heading">favorite
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#favorite-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/favorites/{username}
+            </div>
+            <div class="tab-content">
+              <div id="favorite-delete" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#favorite-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="favorite-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="favorites" class="panel-heading">favorites
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#favorites-post" data-toggle="pill">POST</a></li>
+                <li><a href="#favorites-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/favorites
+            </div>
+            <div class="tab-content">
+              <div id="favorites-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#favorites-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="favorites-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="favorites-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#favorites-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="favorites-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="like" class="panel-heading">like
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#like-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/likes/{username}
+            </div>
+            <div class="tab-content">
+              <div id="like-delete" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#like-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="like-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="likes" class="panel-heading">likes
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#likes-post" data-toggle="pill">POST</a></li>
+                <li><a href="#likes-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/likes
+            </div>
+            <div class="tab-content">
+              <div id="likes-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#likes-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="likes-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="likes-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#likes-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="likes-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Comments">Comments
+          </h2>
+          <div class="panel panel-info">
+            <div id="activity_comment" class="panel-heading">Activity comment
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity_comment-get" data-toggle="pill">GET</a></li>
+                <li><a href="#activity_comment-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/comments/{comment}
+            </div>
+            <div class="tab-content">
+              <div id="activity_comment-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_comment-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_comment-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activity_comment-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_comment-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_comment-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="activity_comments" class="panel-heading">Activity comments
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#activity_comments-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#activity_comments-post" data-toggle="pill">POST</a></li>
+                <li><a href="#activity_comments-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/comments
+            </div>
+            <div class="tab-content">
+              <div id="activity_comments-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_comments-put-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_comments-put-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activity_comments-post" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_comments-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_comments-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/activities/{activity}/comments
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="activity_comments-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#activity_comments-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="activity_comments-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/activities/{activity}/comments
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="comments" class="panel-heading">Comments (Global)
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#comments-head" data-toggle="pill">HEAD</a></li>
+                <li><a href="#comments-get" data-toggle="pill">GET</a></li>
+                <li><a href="#comments-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/comments
+            </div>
+            <div class="tab-content">
+              <div id="comments-head" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#comments-head-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="comments-head-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="comments-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#comments-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="comments-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="comments-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#comments-delete-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#comments-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="comments-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="comments-delete-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_comments" class="panel-heading">Context comments
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_comments-head" data-toggle="pill">HEAD</a></li>
+                <li><a href="#context_comments-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/comments
+            </div>
+            <div class="tab-content">
+              <div id="context_comments-head" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_comments-head-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_comments-head-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_comments-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_comments-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_comments-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Contexts">Contexts
+          </h2>
+          <div class="panel panel-info">
+            <div id="context" class="panel-heading">Context
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#context-get" data-toggle="pill">GET</a></li>
+                <li><a href="#context-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}
+            </div>
+            <div class="tab-content">
+              <div id="context-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context-put-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context-put-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/{hash}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context-get-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#context-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/{hash}
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="context-get-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">/contexts/{hash}
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context-delete-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#context-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="context-delete-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_avatar" class="panel-heading">Context avatar
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_avatar-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/avatar
+            </div>
+            <div class="tab-content">
+              <div id="context_avatar-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_avatar-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_avatar-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/{hash}/avatar
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_user_permission" class="panel-heading">Context permission
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_user_permission-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#context_user_permission-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/permissions/{username}/{permission}
+            </div>
+            <div class="tab-content">
+              <div id="context_user_permission-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_user_permission-put-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_user_permission-put-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">[RESTRICTED]
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_user_permission-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_user_permission-delete-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_user_permission-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">[RESTRICTED]
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_user_permissions_defaults" class="panel-heading">Context permissions defaults
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_user_permissions_defaults-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/permissions/{username}/defaults
+            </div>
+            <div class="tab-content">
+              <div id="context_user_permissions_defaults-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_user_permissions_defaults-post-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_user_permissions_defaults-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">[RESTRICTED]
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_tag" class="panel-heading">Context tag
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_tag-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/tags/{tag}
+            </div>
+            <div class="tab-content">
+              <div id="context_tag-delete" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_tag-delete-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_tag-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_tags" class="panel-heading">Context tags
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_tags-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#context_tags-get" data-toggle="pill">GET</a></li>
+                <li><a href="#context_tags-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/tags
+            </div>
+            <div class="tab-content">
+              <div id="context_tags-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_tags-put-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_tags-put-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_tags-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_tags-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_tags-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="context_tags-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_tags-delete-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_tags-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_push_tokens" class="panel-heading">Context tokens
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_push_tokens-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/tokens
+            </div>
+            <div class="tab-content">
+              <div id="context_push_tokens-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_push_tokens-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_push_tokens-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/{hash}/tokens
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="contexts" class="panel-heading">Contexts
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#contexts-post" data-toggle="pill">POST</a></li>
+                <li><a href="#contexts-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts
+            </div>
+            <div class="tab-content">
+              <div id="contexts-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#contexts-post-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="contexts-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="contexts-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#contexts-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="contexts-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="public_contexts" class="panel-heading">Public contexts
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#public_contexts-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/public
+            </div>
+            <div class="tab-content">
+              <div id="public_contexts-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#public_contexts-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="public_contexts-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/contexts/public
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="context_subscriptions" class="panel-heading">Users subscribed to context
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#context_subscriptions-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/contexts/{hash}/subscriptions
+            </div>
+            <div class="tab-content">
+              <div id="context_subscriptions-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#context_subscriptions-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="context_subscriptions-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Conversations">Conversations
+          </h2>
+          <div class="panel panel-info">
+            <div id="conversation" class="panel-heading">Conversation
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#conversation-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#conversation-get" data-toggle="pill">GET</a></li>
+                <li><a href="#conversation-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations/{id}
+            </div>
+            <div class="tab-content">
+              <div id="conversation-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversation-put-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversation-put-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversation/{id}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="conversation-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversation-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversation-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations/{id}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="conversation-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversation-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversation-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="conversation_avatar" class="panel-heading">Conversation avatar
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#conversation_avatar-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations/{id}/avatar
+            </div>
+            <div class="tab-content">
+              <div id="conversation_avatar-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversation_avatar-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversation_avatar-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversation/{id}/avatar
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="messages" class="panel-heading">Conversation mesages
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#messages-post" data-toggle="pill">POST</a></li>
+                <li><a href="#messages-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations/{id}/messages
+            </div>
+            <div class="tab-content">
+              <div id="messages-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#messages-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="messages-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations/{id}/messages
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="messages-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#messages-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="messages-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations/{id}/messages
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="conversation_owner" class="panel-heading">Conversation owner
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#conversation_owner-put" data-toggle="pill">PUT</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations/{id}/owner
+            </div>
+            <div class="tab-content">
+              <div id="conversation_owner-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversation_owner-put-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversation_owner-put-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="pushtokens" class="panel-heading">Conversation tokens
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#pushtokens-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations/{id}/tokens
+            </div>
+            <div class="tab-content">
+              <div id="pushtokens-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#pushtokens-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="pushtokens-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations/{id}/tokens
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="conversations" class="panel-heading">Conversations
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#conversations-post" data-toggle="pill">POST</a></li>
+                <li><a href="#conversations-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/conversations
+            </div>
+            <div class="tab-content">
+              <div id="conversations-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversations-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversations-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="conversations-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#conversations-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="conversations-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/conversations
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_conversation" class="panel-heading">User conversation
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_conversation-post" data-toggle="pill">POST</a></li>
+                <li><a href="#user_conversation-delete" data-toggle="pill">DELETE</a></li>
+                <li><a href="#user_conversation-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/conversations/{id}
+            </div>
+            <div class="tab-content">
+              <div id="user_conversation-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_conversation-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_conversation-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/conversations/{id}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user_conversation-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_conversation-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_conversation-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user_conversation-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_conversation-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_conversation-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/conversations/{id}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_conversation_messages" class="panel-heading">User conversation messages
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_conversation_messages-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/conversations/{id}/messages
+            </div>
+            <div class="tab-content">
+              <div id="user_conversation_messages-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_conversation_messages-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_conversation_messages-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/conversations/{id}/messages
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Management">Management
+          </h2>
+          <div class="panel panel-info">
+            <div id="maintenance_conversations" class="panel-heading">Conversations maintenance
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_conversations-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/conversations
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_conversations-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_conversations-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_conversations-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/conversations
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_dates" class="panel-heading">Dates maintenance
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_dates-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/dates
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_dates-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_dates-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_dates-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/dates
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_exception" class="panel-heading">Error Exception
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_exception-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/exceptions/{hash}
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_exception-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_exception-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_exception-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/exceptions/{hash}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_exceptions" class="panel-heading">Error Exception list
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_exceptions-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/exceptions
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_exceptions-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_exceptions-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_exceptions-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/exceptions
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_keywords" class="panel-heading">Keywords maintenance
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_keywords-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/keywords
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_keywords-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_keywords-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_keywords-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/keywords
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="info" class="panel-heading">Public settings
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#info-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/info
+            </div>
+            <div class="tab-content">
+              <div id="info-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#info-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="info-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/info
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="info_settings" class="panel-heading">Restricted settings
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#info_settings-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/info/settings
+            </div>
+            <div class="tab-content">
+              <div id="info_settings-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#info_settings-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="info_settings-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/info/settings
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="admin_security" class="panel-heading">Security settings
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#admin_security-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/security
+            </div>
+            <div class="tab-content">
+              <div id="admin_security-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#admin_security-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="admin_security-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/admin/security
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_subscriptions" class="panel-heading">Subscriptions maintenance
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_subscriptions-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/subscriptions
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_subscriptions-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_subscriptions-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_subscriptions-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/maintenance/subscriptions
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="admin_security_role_user" class="panel-heading">User role
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#admin_security_role_user-post" data-toggle="pill">POST</a></li>
+                <li><a href="#admin_security_role_user-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/security/roles/{role}/users/{user}
+            </div>
+            <div class="tab-content">
+              <div id="admin_security_role_user-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#admin_security_role_user-post-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="admin_security_role_user-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/admin/security/roles/{role}/users/{user}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="admin_security_role_user-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#admin_security_role_user-delete-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="admin_security_role_user-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/admin/security/roles/{role}/users/{user}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="maintenance_users" class="panel-heading">Users Maintenance
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#maintenance_users-post" data-toggle="pill">POST</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/maintenance/users
+            </div>
+            <div class="tab-content">
+              <div id="maintenance_users-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#maintenance_users-post-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="maintenance_users-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Rebuilds user objects with defaults and consistency checks.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="admin_security_users" class="panel-heading">Users with security
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#admin_security_users-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/admin/security/users
+            </div>
+            <div class="tab-content">
+              <div id="admin_security_users-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#admin_security_users-get-manager" data-toggle="pill">Manager</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="admin_security_users-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/admin/security/users
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Messages">Messages
+          </h2>
+          <div class="panel panel-info">
+            <div id="message_file_download" class="panel-heading">File
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#message_file_download-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/messages/{id}/file/download
+            </div>
+            <div class="tab-content">
+              <div id="message_file_download-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#message_file_download-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="message_file_download-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns file from local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="message_image" class="panel-heading">Image
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#message_image-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/messages/{id}/image
+            </div>
+            <div class="tab-content">
+              <div id="message_image-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#message_image-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="message_image-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns an image or from local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="message_image_sizes" class="panel-heading">Named size Image
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#message_image_sizes-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/messages/{id}/image/{size}
+            </div>
+            <div class="tab-content">
+              <div id="message_image_sizes-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#message_image_sizes-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="message_image_sizes-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Returns an image or from local repository.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Subscriptions">Subscriptions
+          </h2>
+          <div class="panel panel-info">
+            <div id="subscription" class="panel-heading">User subscription
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#subscription-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/subscriptions/{hash}
+            </div>
+            <div class="tab-content">
+              <div id="subscription-delete" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#subscription-delete-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#subscription-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="subscription-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="subscription-delete-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="subscriptions" class="panel-heading">User subscriptions
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#subscriptions-post" data-toggle="pill">POST</a></li>
+                <li><a href="#subscriptions-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/subscriptions
+            </div>
+            <div class="tab-content">
+              <div id="subscriptions-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#subscriptions-post-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#subscriptions-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="subscriptions-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/subscriptions
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="subscriptions-post-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">/people/{username}/subscriptions
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="subscriptions-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#subscriptions-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="subscriptions-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/subscriptions
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="Uncategorized">Uncategorized
+          </h2>
+          <div class="panel panel-info">
+            <div id="follow" class="panel-heading">follow
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#follow-post" data-toggle="pill">POST</a></li>
+                <li><a href="#follow-delete" data-toggle="pill">DELETE</a></li>
+                <li><a href="#follow-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/follows/{followedUsername}
+            </div>
+            <div class="tab-content">
+              <div id="follow-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#follow-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="follow-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/follows/{followedUsername}'
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="follow-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#follow-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="follow-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="follow-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#follow-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="follow-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="follows" class="panel-heading">follows
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#follows-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/follows
+            </div>
+            <div class="tab-content">
+              <div id="follows-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#follows-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="follows-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="share" class="panel-heading">share
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#share-delete" data-toggle="pill">DELETE</a></li>
+                <li><a href="#share-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/shares/{shareId}
+            </div>
+            <div class="tab-content">
+              <div id="share-delete" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#share-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="share-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="share-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#share-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="share-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="shares" class="panel-heading">shares
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#shares-post" data-toggle="pill">POST</a></li>
+                <li><a href="#shares-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/activities/{activity}/shares
+            </div>
+            <div class="tab-content">
+              <div id="shares-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#shares-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="shares-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="shares-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#shares-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="shares-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_comments" class="panel-heading">user_comments
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_comments-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/comments
+            </div>
+            <div class="tab-content">
+              <div id="user_comments-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_comments-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_comments-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_shares" class="panel-heading">user_shares
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_shares-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/shares
+            </div>
+            <div class="tab-content">
+              <div id="user_shares-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_shares-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_shares-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <h2 id="User">User
+          </h2>
+          <div class="panel panel-info">
+            <div id="user" class="panel-heading">User
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user-put" data-toggle="pill">PUT</a></li>
+                <li><a href="#user-post" data-toggle="pill">POST</a></li>
+                <li><a href="#user-get" data-toggle="pill">GET</a></li>
+                <li><a href="#user-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}
+            </div>
+            <div class="tab-content">
+              <div id="user-put" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user-put-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user-put-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user-put-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user-put-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">/people/{username}
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user-post" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user-post-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user-post-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user-post-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">/people/{username}
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user-delete-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#user-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user-delete-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="user-delete-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="avatar" class="panel-heading">User avatar
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#avatar-post" data-toggle="pill">POST</a></li>
+                <li><a href="#avatar-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/avatar
+            </div>
+            <div class="tab-content">
+              <div id="avatar-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#avatar-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="avatar-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/avatar
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="avatar-get" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#avatar-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="avatar-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/avatar
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="avatar_sizes" class="panel-heading">User avatar sizes
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#avatar_sizes-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/avatar/{size}
+            </div>
+            <div class="tab-content">
+              <div id="avatar_sizes-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#avatar_sizes-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="avatar_sizes-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">/people/{username}/avatar
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_device" class="panel-heading">User device tokens
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_device-post" data-toggle="pill">POST</a></li>
+                <li><a href="#user_device-delete" data-toggle="pill">DELETE</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/device/{platform}/{token}
+            </div>
+            <div class="tab-content">
+              <div id="user_device-post" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_device-post-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_device-post-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Adds a new user device to the user's profile.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+              <div id="user_device-delete" class="tab-pane">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_device-delete-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_device-delete-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">Delete an existing user device to the user's profile.
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_favorites" class="panel-heading">User favorited activities
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_favorites-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/favorites
+            </div>
+            <div class="tab-content">
+              <div id="user_favorites-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_favorites-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_favorites-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="user_likes" class="panel-heading">User liked activity
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#user_likes-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people/{username}/likes
+            </div>
+            <div class="tab-content">
+              <div id="user_likes-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#user_likes-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="user_likes-get-everyone" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div id="users" class="panel-heading">Users
+              <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#users-get" data-toggle="pill">GET</a></li>
+              </ul>
+            </div>
+            <div class="panel-body source">/people
+            </div>
+            <div class="tab-content">
+              <div id="users-get" class="tab-pane active">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <ul class="nav nav-pills">
+                                    <li class="active"><a href="#users-get-manager" data-toggle="pill">Manager</a></li>
+                                    <li><a href="#users-get-everyone" data-toggle="pill">Everyone</a></li>
+                                  </ul>
+                                </li>
+                                <div class="tab-content">
+                                  <div id="users-get-manager" class="tab-pane active">
+                                    <li class="list-group-item">
+                                      <li class="list-group-item">
+                                      </li>
+                                      <li class="list-group-item">
+                                      </li>
+                                    </li>
+                                  </div>
+                                  <div id="users-get-everyone" class="tab-pane">
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">
+                                    </li>
+                                    <li class="list-group-item">/people
+                                    </li>
+                                  </div>
+                                </div>
+                              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">MAX is made with love by <a href="http://twitter.com/sunbit">@sunbit</a>, <a href="http://twitter.com/sneridagh">@sneridagh</a> and the <a href="http://www.upcnet.es">UPCnet</a> eKnowledge Team. Text under CC license by <a href="http://www.upcnet.es">UPCnet, SLU</a>.</p>
+      </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
